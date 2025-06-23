@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanasui - Cantik Alami, Harga Terjangkau</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Menggunakan font Inter sebagai default */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Efek gradasi halus pada hero section */
+        .hero-gradient {
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe8ec 100%);
+        }
+        /* Animasi halus saat hover pada tombol dan kartu */
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <h1 class="text-2xl font-bold text-pink-500">Hanasui</h1>
+            <!-- Navigasi (Desktop) -->
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#produk" class="text-gray-600 hover:text-pink-500 transition-all">Produk Unggulan</a>
+                <a href="#keunggulan" class="text-gray-600 hover:text-pink-500 transition-all">Keunggulan</a>
+                <a href="#testimoni" class="text-gray-600 hover:text-pink-500 transition-all">Testimoni</a>
+                <a href="#cta" class="bg-pink-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-pink-600 transition-all shadow-md hover:shadow-lg">
+                    Beli Sekarang
+                </a>
+            </nav>
+            <!-- Tombol Menu (Mobile) -->
+            <button class="md:hidden text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-gradient pt-16 pb-20">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <span class="text-pink-500 font-semibold">#CantikGakAdaBatas</span>
+                    <h2 class="text-4xl md:text-6xl font-bold text-gray-900 mt-4 mb-6 leading-tight">Wujudkan Kulit Sehat & Bercahaya Bersama Hanasui</h2>
+                    <p class="text-lg text-gray-600 mb-10">Solusi perawatan kulit berkualitas dengan bahan-bahan terbaik, aman teruji BPOM, dan harga yang terjangkau untuk semua.</p>
+                    <a href="#produk" class="bg-pink-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Lihat Koleksi Kami
+                    </a>
+                </div>
+                <div class="mt-12">
+                    <img src="https://placehold.co/800x400/FFE8EC/E91E63?text=Hanasui+Products" alt="Jajaran Produk Hanasui" class="rounded-2xl shadow-2xl mx-auto w-full max-w-4xl"
+                    onerror="this.onerror=null;this.src='https://placehold.co/800x400/cccccc/ffffff?text=Image+Not+Found'">
+                </div>
+            </div>
+        </section>
+
+        <!-- Keunggulan Section -->
+        <section id="keunggulan" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-900">Kenapa Memilih Hanasui?</h3>
+                    <p class="text-gray-600 mt-2">Kecantikan yang bisa dipercaya, setiap hari.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Keunggulan 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-2">
+                        <div class="bg-pink-100 text-pink-500 w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Aman & Teruji BPOM</h4>
+                        <p class="text-gray-600">Semua produk kami telah lulus uji dan terdaftar resmi di BPOM, menjamin keamanan untuk kulitmu.</p>
+                    </div>
+                    <!-- Keunggulan 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-2">
+                        <div class="bg-orange-100 text-orange-500 w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 10.18a.5.5 0 0 0-.42-.18H13.5A1.5 1.5 0 0 1 12 8.5V2.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v6A1.5 1.5 0 0 1 6.5 10H2.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h4A1.5 1.5 0 0 1 8 15.5v6a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-6A1.5 1.5 0 0 1 13.5 14h6.5a.5.5 0 0 0 .42-.82l-2-3Z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Harga Terjangkau</h4>
+                        <p class="text-gray-600">Kami percaya bahwa cantik tidak harus mahal. Kualitas terbaik dengan harga yang ramah di kantong.</p>
+                    </div>
+                    <!-- Keunggulan 3 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-2">
+                        <div class="bg-purple-100 text-purple-500 w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="m10.4 12.6.9 1.8.9-1.8"></path><path d="m14 17-1-1-1 1"></path><path d="m8 17 1-1 1 1"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Inovasi Bahan Alami</h4>
+                        <p class="text-gray-600">Diformulasikan dengan ekstrak bahan alami pilihan yang efektif menutrisi dan mencerahkan kulit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Produk Unggulan Section -->
+        <section id="produk" class="py-20 bg-pink-50/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-900">Produk Terlaris Kami</h3>
+                    <p class="text-gray-600 mt-2">Temukan favoritmu dari koleksi terbaik Hanasui.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Produk 1: Serum Vitamin C -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all transform hover:scale-105 hover:shadow-xl">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://placehold.co/400x400/FFDDC1/E91E63?text=Serum+Vit+C" alt="Hanasui Vitamin C Serum" class="w-full h-full object-cover group-hover:scale-110 transition-all" onerror="this.onerror=null;this.src='https://placehold.co/400x400/cccccc/ffffff?text=Image+Not+Found'">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg">Serum Vitamin C</h4>
+                            <p class="text-gray-600 text-sm mt-1">Mencerahkan dan melawan radikal bebas.</p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <span class="font-bold text-pink-500 text-lg">Rp 25.000</span>
+                                <a href="#" class="text-sm font-semibold text-pink-600 hover:text-pink-700">Beli Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produk 2: Sunscreen -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all transform hover:scale-105 hover:shadow-xl">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://placehold.co/400x400/C1FFF1/E91E63?text=Sunscreen" alt="Hanasui Collagen Sunscreen" class="w-full h-full object-cover group-hover:scale-110 transition-all" onerror="this.onerror=null;this.src='https://placehold.co/400x400/cccccc/ffffff?text=Image+Not+Found'">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg">Collagen Water Sunscreen</h4>
+                            <p class="text-gray-600 text-sm mt-1">Melindungi dari UV dengan sensasi dingin.</p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <span class="font-bold text-pink-500 text-lg">Rp 40.000</span>
+                                <a href="#" class="text-sm font-semibold text-pink-600 hover:text-pink-700">Beli Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produk 3: Lip Cream -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all transform hover:scale-105 hover:shadow-xl">
+                        <div class="h-56 overflow-hidden">
+                           <img src="https://placehold.co/400x400/FFC1D6/E91E63?text=Lip+Cream" alt="Hanasui Mattedorable Lip Cream" class="w-full h-full object-cover group-hover:scale-110 transition-all" onerror="this.onerror=null;this.src='https://placehold.co/400x400/cccccc/ffffff?text=Image+Not+Found'">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg">Mattedorable Lip Cream</h4>
+                            <p class="text-gray-600 text-sm mt-1">Warna intens, ringan, dan tahan lama.</p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <span class="font-bold text-pink-500 text-lg">Rp 30.000</span>
+                                <a href="#" class="text-sm font-semibold text-pink-600 hover:text-pink-700">Beli Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produk 4: Body Spa -->
+                     <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all transform hover:scale-105 hover:shadow-xl">
+                        <div class="h-56 overflow-hidden">
+                            <img src="https://placehold.co/400x400/D1C1FF/E91E63?text=Body+Spa" alt="Hanasui Body Spa Exfoliating Gel" class="w-full h-full object-cover group-hover:scale-110 transition-all" onerror="this.onerror=null;this.src='https://placehold.co/400x400/cccccc/ffffff?text=Image+Not+Found'">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="font-bold text-lg">Body Spa Exfoliating Gel</h4>
+                            <p class="text-gray-600 text-sm mt-1">Mengangkat sel kulit mati dengan lembut.</p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <span class="font-bold text-pink-500 text-lg">Rp 20.000</span>
+                                <a href="#" class="text-sm font-semibold text-pink-600 hover:text-pink-700">Beli Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimoni Section -->
+        <section id="testimoni" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-900">Apa Kata #HanasuiSquad?</h3>
+                    <p class="text-gray-600 mt-2">Pengalaman nyata dari para pengguna setia kami.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimoni 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/48x48/FFC1D6/ffffff?text=A" alt="Avatar Amanda" class="w-12 h-12 rounded-full mr-4" onerror="this.onerror=null;this.src='https://placehold.co/48x48/cccccc/ffffff?text=A'">
+                            <div>
+                                <h5 class="font-semibold">Amanda S.</h5>
+                                <p class="text-sm text-gray-500">Mahasiswi, Jakarta</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">"Suka banget sama serum Vitamin C-nya! Udah pake botol kedua dan kulitku beneran jadi lebih cerah dan noda hitam bekas jerawat memudar. Harganya juga pas buat kantong mahasiswa!"</p>
+                    </div>
+                     <!-- Testimoni 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/48x48/C1FFF1/ffffff?text=R" alt="Avatar Rina" class="w-12 h-12 rounded-full mr-4" onerror="this.onerror=null;this.src='https://placehold.co/48x48/cccccc/ffffff?text=R'">
+                            <div>
+                                <h5 class="font-semibold">Rina F.</h5>
+                                <p class="text-sm text-gray-500">Karyawan Swasta, Surabaya</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">"Sunscreen-nya juara! Gak lengket sama sekali, cepat meresap, dan ada sensasi dinginnya. Dipakai sebelum makeup juga gak bikin geser. Wajib coba!"</p>
+                    </div>
+                     <!-- Testimoni 3 -->
+                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                        <div class="flex items-center mb-4">
+                            <img src="https://placehold.co/48x48/FFDDC1/ffffff?text=D" alt="Avatar Dewi" class="w-12 h-12 rounded-full mr-4" onerror="this.onerror=null;this.src='https://placehold.co/48x48/cccccc/ffffff?text=D'">
+                            <div>
+                                <h5 class="font-semibold">Dewi K.</h5>
+                                <p class="text-sm text-gray-500">Ibu Rumah Tangga, Bandung</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">"Lip cream Hanasui jadi andalanku buat sehari-hari. Pilihan warnanya banyak, formulanya ringan di bibir, dan yang paling penting gak bikin bibir kering. Love it!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call to Action (CTA) Section -->
+        <section id="cta" class="hero-gradient">
+            <div class="container mx-auto px-6 py-20 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Siap Dapatkan Kulit Impianmu?</h2>
+                <p class="text-lg text-gray-600 mt-4 mb-8 max-w-2xl mx-auto">Jangan tunda lagi! Mulai perjalanan kulit sehatmu dan temukan produk Hanasui favoritmu sekarang juga.</p>
+                <a href="#" class="bg-pink-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-pink-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Belanja di Official Store
+                </a>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Hanasui</h3>
+                    <p class="text-gray-400">Cantik itu Hanasui. Kami berkomitmen menyediakan produk kecantikan berkualitas, aman, dan terjangkau untuk wanita Indonesia.</p>
+                </div>
+                <!-- Links (disederhanakan) -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Tautan</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#produk" class="hover:text-pink-400 transition-all">Produk</a></li>
+                        <li><a href="#testimoni" class="hover:text-pink-400 transition-all">Testimoni</a></li>
+                        <li><a href="#" class="hover:text-pink-400 transition-all">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163m0-2.163C8.74 0 8.333.011 7.053.069 2.59.284.284 2.59.069 7.053.011 8.333 0 8.74 0 12s.011 3.667.069 4.947c.215 4.46 2.525 6.766 7.004 6.981C8.333 23.989 8.74 24 12 24s3.667-.011 4.947-.069c4.479-.215 6.789-2.521 7.004-6.981.058-1.28.069-1.687.069-4.947s-.011-3.667-.069-4.947C21.716 2.59 19.41 0 14.947.069 13.667.011 13.26 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+                        </a>
+                         <a href="#" class="text-gray-400 hover:text-white transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35C.589 0 0 .589 0 1.325v21.351C0 23.411.589 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.736 0 1.325-.589 1.325-1.325V1.325C24 .589 23.411 0 22.675 0z"/></svg>
+                        </a>
+                         <a href="#" class="text-gray-400 hover:text-white transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91.02 2.5.06 4.13 1.02 5.53 3.03 1.25 1.8 1.63 3.62 1.72 5.61.05 1.06.06 2.12.06 3.18s-.01 2.12-.06 3.18c-.09 1.99-.47 3.8-1.72 5.61-1.4 2.01-3.03 2.97-5.53 3.03-1.3.03-2.6.04-3.91.02-2.5-.06-4.13-1.02-5.53-3.03-1.25-1.8-1.63-3.62-1.72-5.61-.05-1.06-.06-2.12-.06-3.18s.01-2.12.06-3.18c.09-1.99.47-3.8 1.72-5.61 1.4-2.01 3.03-2.97 5.53-3.03m.49 21.5c1.24-.01 2.48-.01 3.72-.02 2-.04 3.03-.63 3.9-2.2.6-.96.93-2.02 1-3.14.04-1.03.04-2.07.04-3.11s0-2.08-.04-3.11c-.07-1.12-.4-2.18-1-3.14-.87-1.57-1.9-2.16-3.9-2.2-1.24-.01-2.48-.01-3.72-.02-2.03.04-3.06.63-3.93 2.2-.6.96-.93 2.02-1.02 3.14-.04 1.03-.04 2.07-.04 3.11s0 2.08.04 3.11c.09 1.12.42 2.18 1.02 3.14.87 1.57 1.9 2.16 3.93 2.2zM12 6.87c-2.83 0-5.13 2.3-5.13 5.13s2.3 5.13 5.13 5.13 5.13-2.3 5.13-5.13-2.3-5.13-5.13-5.13zm0 8.52c-1.87 0-3.39-1.52-3.39-3.39s1.52-3.39 3.39-3.39 3.39 1.52 3.39 3.39-1.52 3.39-3.39 3.39z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Hanasui. All rights reserved. Didesain untuk wanita Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
