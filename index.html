@@ -17,6 +17,7 @@
         /* Menggunakan font Inter sebagai default */
         body {
             font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
         /* Efek gradasi halus pada hero section */
         .hero-gradient {
@@ -25,6 +26,22 @@
         /* Animasi halus saat hover pada tombol dan kartu */
         .transition-all {
             transition: all 0.3s ease-in-out;
+        }
+         /* Styling untuk hasil AI */
+        #ai-recommendation-result h3 {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            margin-top: 1rem; /* mt-4 */
+            margin-bottom: 0.5rem; /* mb-2 */
+            color: #1f2937; /* text-gray-800 */
+        }
+        #ai-recommendation-result ul {
+            list-style-position: inside;
+            padding-left: 0.5rem; /* pl-2 */
+            color: #4b5563; /* text-gray-600 */
+        }
+         #ai-recommendation-result li {
+            margin-bottom: 0.5rem; /* mb-2 */
         }
     </style>
 </head>
@@ -37,7 +54,8 @@
             <h1 class="text-2xl font-bold text-pink-500">Hanasui</h1>
             <!-- Navigasi (Desktop) -->
             <nav class="hidden md:flex space-x-8 items-center">
-                <a href="#produk" class="text-gray-600 hover:text-pink-500 transition-all">Produk Unggulan</a>
+                <a href="#produk" class="text-gray-600 hover:text-pink-500 transition-all">Produk</a>
+                <a href="#rekomendasi-ai" class="text-gray-600 hover:text-pink-500 transition-all">Rekomendasi AI</a>
                 <a href="#keunggulan" class="text-gray-600 hover:text-pink-500 transition-all">Keunggulan</a>
                 <a href="#testimoni" class="text-gray-600 hover:text-pink-500 transition-all">Testimoni</a>
                 <a href="#cta" class="bg-pink-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-pink-600 transition-all shadow-md hover:shadow-lg">
@@ -45,9 +63,19 @@
                 </a>
             </nav>
             <!-- Tombol Menu (Mobile) -->
-            <button class="md:hidden text-gray-700">
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+             <a href="#produk" class="block py-2 text-gray-600 hover:text-pink-500">Produk</a>
+             <a href="#rekomendasi-ai" class="block py-2 text-gray-600 hover:text-pink-500">Rekomendasi AI</a>
+             <a href="#keunggulan" class="block py-2 text-gray-600 hover:text-pink-500">Keunggulan</a>
+             <a href="#testimoni" class="block py-2 text-gray-600 hover:text-pink-500">Testimoni</a>
+             <a href="#cta" class="block mt-2 text-center bg-pink-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-pink-600">
+                Beli Sekarang
+             </a>
         </div>
     </header>
 
@@ -69,46 +97,10 @@
                 </div>
             </div>
         </section>
-
-        <!-- Keunggulan Section -->
-        <section id="keunggulan" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h3 class="text-3xl font-bold text-gray-900">Kenapa Memilih Hanasui?</h3>
-                    <p class="text-gray-600 mt-2">Kecantikan yang bisa dipercaya, setiap hari.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <!-- Keunggulan 1 -->
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-2">
-                        <div class="bg-pink-100 text-pink-500 w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
-                        </div>
-                        <h4 class="text-xl font-semibold mb-2">Aman & Teruji BPOM</h4>
-                        <p class="text-gray-600">Semua produk kami telah lulus uji dan terdaftar resmi di BPOM, menjamin keamanan untuk kulitmu.</p>
-                    </div>
-                    <!-- Keunggulan 2 -->
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-2">
-                        <div class="bg-orange-100 text-orange-500 w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 10.18a.5.5 0 0 0-.42-.18H13.5A1.5 1.5 0 0 1 12 8.5V2.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v6A1.5 1.5 0 0 1 6.5 10H2.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h4A1.5 1.5 0 0 1 8 15.5v6a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-6A1.5 1.5 0 0 1 13.5 14h6.5a.5.5 0 0 0 .42-.82l-2-3Z"></path></svg>
-                        </div>
-                        <h4 class="text-xl font-semibold mb-2">Harga Terjangkau</h4>
-                        <p class="text-gray-600">Kami percaya bahwa cantik tidak harus mahal. Kualitas terbaik dengan harga yang ramah di kantong.</p>
-                    </div>
-                    <!-- Keunggulan 3 -->
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-2">
-                        <div class="bg-purple-100 text-purple-500 w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="m10.4 12.6.9 1.8.9-1.8"></path><path d="m14 17-1-1-1 1"></path><path d="m8 17 1-1 1 1"></path></svg>
-                        </div>
-                        <h4 class="text-xl font-semibold mb-2">Inovasi Bahan Alami</h4>
-                        <p class="text-gray-600">Diformulasikan dengan ekstrak bahan alami pilihan yang efektif menutrisi dan mencerahkan kulit.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        
         <!-- Produk Unggulan Section -->
         <section id="produk" class="py-20 bg-pink-50/50">
-            <div class="container mx-auto px-6">
+             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h3 class="text-3xl font-bold text-gray-900">Produk Terlaris Kami</h3>
                     <p class="text-gray-600 mt-2">Temukan favoritmu dari koleksi terbaik Hanasui.</p>
@@ -169,6 +161,74 @@
                                 <a href="#" class="text-sm font-semibold text-pink-600 hover:text-pink-700">Beli Sekarang</a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rekomendasi AI Section -->
+        <section id="rekomendasi-ai" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-900">Rekomendasi Skincare AI</h3>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Bingung pilih produk? Jelaskan kondisi kulitmu (contoh: "kulitku berminyak, kusam, dan ada bekas jerawat"), dan biarkan AI kami membantumu!</p>
+                </div>
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                        <textarea id="skin-description" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-400 focus:border-pink-400 transition" placeholder="Contoh: Kulitku kering di area pipi tapi berminyak di T-zone, kusam, dan mulai ada garis halus."></textarea>
+                        <button id="get-recommendation-btn" class="w-full mt-4 bg-pink-500 text-white px-8 py-3 rounded-lg font-bold text-lg hover:bg-pink-600 transition-all shadow-md hover:shadow-lg">
+                            Dapatkan Rekomendasi
+                        </button>
+                    </div>
+                    <!-- AI Result Container -->
+                    <div id="ai-recommendation-container" class="mt-8 bg-gray-50 p-8 rounded-xl border border-gray-200 hidden">
+                        <!-- Loading Spinner -->
+                        <div id="loader" class="text-center hidden">
+                            <svg class="animate-spin h-8 w-8 text-pink-500 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            <p class="mt-2 text-gray-600">AI sedang menyiapkan rekomendasi untukmu...</p>
+                        </div>
+                         <!-- Result Content -->
+                        <div id="ai-recommendation-result"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Keunggulan Section -->
+        <section id="keunggulan" class="py-20 bg-pink-50/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-900">Kenapa Memilih Hanasui?</h3>
+                    <p class="text-gray-600 mt-2">Kecantikan yang bisa dipercaya, setiap hari.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Keunggulan 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-2">
+                        <div class="bg-pink-100 text-pink-500 w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Aman & Teruji BPOM</h4>
+                        <p class="text-gray-600">Semua produk kami telah lulus uji dan terdaftar resmi di BPOM, menjamin keamanan untuk kulitmu.</p>
+                    </div>
+                    <!-- Keunggulan 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-2">
+                        <div class="bg-orange-100 text-orange-500 w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 10.18a.5.5 0 0 0-.42-.18H13.5A1.5 1.5 0 0 1 12 8.5V2.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v6A1.5 1.5 0 0 1 6.5 10H2.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h4A1.5 1.5 0 0 1 8 15.5v6a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-6A1.5 1.5 0 0 1 13.5 14h6.5a.5.5 0 0 0 .42-.82l-2-3Z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Harga Terjangkau</h4>
+                        <p class="text-gray-600">Kami percaya bahwa cantik tidak harus mahal. Kualitas terbaik dengan harga yang ramah di kantong.</p>
+                    </div>
+                    <!-- Keunggulan 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all transform hover:-translate-y-2">
+                        <div class="bg-purple-100 text-purple-500 w-16 h-16 rounded-full mx-auto flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="m10.4 12.6.9 1.8.9-1.8"></path><path d="m14 17-1-1-1 1"></path><path d="m8 17 1-1 1 1"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Inovasi Bahan Alami</h4>
+                        <p class="text-gray-600">Diformulasikan dengan ekstrak bahan alami pilihan yang efektif menutrisi dan mencerahkan kulit.</p>
                     </div>
                 </div>
             </div>
@@ -272,6 +332,94 @@
         </div>
     </footer>
 
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
+        // --- Generative AI Logic ---
+        const getRecommendationBtn = document.getElementById('get-recommendation-btn');
+        const skinDescriptionInput = document.getElementById('skin-description');
+        const recommendationContainer = document.getElementById('ai-recommendation-container');
+        const recommendationResultDiv = document.getElementById('ai-recommendation-result');
+        const loader = document.getElementById('loader');
+
+        getRecommendationBtn.addEventListener('click', async () => {
+            const userDescription = skinDescriptionInput.value;
+            if (!userDescription.trim()) {
+                // Jangan kirim jika input kosong
+                recommendationResultDiv.innerText = "Mohon deskripsikan kondisi kulit Anda terlebih dahulu.";
+                recommendationContainer.classList.remove('hidden');
+                return;
+            }
+
+            // Show loader and container, clear previous result
+            loader.classList.remove('hidden');
+            recommendationResultDiv.innerHTML = '';
+            recommendationContainer.classList.remove('hidden');
+
+            const availableProducts = [
+                "Serum Vitamin C (Mencerahkan dan melawan radikal bebas)",
+                "Collagen Water Sunscreen (Melindungi dari UV dengan sensasi dingin)",
+                "Mattedorable Lip Cream (Warna intens, ringan, dan tahan lama)",
+                "Body Spa Exfoliating Gel (Mengangkat sel kulit mati dengan lembut)"
+            ];
+
+            const prompt = `Anda adalah seorang ahli kecantikan virtual untuk brand Hanasui. Berdasarkan deskripsi kulit pengguna, berikan rekomendasi rutin skincare untuk Pagi dan Malam.
+            Gunakan HANYA produk dari daftar berikut: ${availableProducts.join(", ")}.
+            Sajikan jawaban dalam format yang jelas dengan judul "Rekomendasi Rutin Skincare Hanasui Untukmu", diikuti dengan subheading "**Rutin Pagi:**" dan "**Rutin Malam:**".
+            Setiap rutin harus dalam bentuk daftar berpoin. Berikan penjelasan singkat untuk setiap produk yang direkomendasikan.
+            Jika ada produk yang tidak relevan untuk wajah (seperti body spa atau lip cream), jelaskan cara penggunaannya di luar rutin wajah.
+
+            Deskripsi Kulit Pengguna: "${userDescription}"`;
+
+            try {
+                let chatHistory = [];
+                chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                const payload = { contents: chatHistory };
+                const apiKey = ""; 
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+                
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API request failed with status ${response.status}`);
+                }
+                
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    let text = result.candidates[0].content.parts[0].text;
+                    
+                    // Simple Markdown to HTML conversion
+                    text = text.replace(/\*\*(.*?)\*\*/g, '<h3>$1</h3>'); // Bold to h3
+                    text = text.replace(/^\* (.*$)/gm, '<li>$1</li>'); // List items
+                    text = text.replace(/<\/h3>\s*([\s\S]*?)(?=(<h3>|$))/g, (match, p1) => `</h3><ul>${p1.trim().replace(/\n/g, '')}</ul>`); // Wrap lists in <ul>
+                    
+                    recommendationResultDiv.innerHTML = text;
+
+                } else {
+                    throw new Error("Gagal mendapatkan rekomendasi dari AI. Coba lagi.");
+                }
+
+            } catch (error) {
+                console.error("Error:", error);
+                recommendationResultDiv.innerText = "Maaf, terjadi kesalahan saat mengambil rekomendasi. Silakan coba beberapa saat lagi.";
+            } finally {
+                // Hide loader
+                loader.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>
+
